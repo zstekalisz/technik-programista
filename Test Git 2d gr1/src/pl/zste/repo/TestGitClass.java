@@ -10,6 +10,8 @@ public class TestGitClass {
 		System.out.println("Oliwier");
 		
 		System.out.println("Wiktor");
+		
+		System.out.println("Jakub");
 	}
 
 }
