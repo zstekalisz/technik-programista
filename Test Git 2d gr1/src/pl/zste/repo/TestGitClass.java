@@ -18,6 +18,8 @@ public class TestGitClass {
 		System.out.println("MICHCHu");
 		
 		System.out.println("Bartek");
+		
+		System.out.println("Szymon");
 	}
 
 }
