@@ -8,6 +8,8 @@ public class TestGitClass {
 		System.out.println("Wojtek");
 		
 		System.out.println("Oliwier");
+		
+		System.out.println("Wiktor");
 	}
 
 }
