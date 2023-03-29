@@ -12,6 +12,8 @@ public class TestGitClass {
 		System.out.println("Wiktor");
 		
 		System.out.println("Jakub");
+		
+		System.out.println("Maciek");
 	}
 
 }
