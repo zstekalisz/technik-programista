@@ -8,6 +8,6 @@ public class StartMain {
 		System.out.println("Miłosz");
 		System.out.println("Kornel");
 		System.out.println("Kacper");
-
+		System.out.println("Kamil");
 	}
 }
