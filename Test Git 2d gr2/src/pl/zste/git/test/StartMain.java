@@ -13,6 +13,7 @@ public class StartMain {
 		System.out.println("KacperB");
 		System.out.println("Mateusz");
 		System.out.println("Kordian");
+		System.out.println("Mikołaj");
 		
 	}
 }
