@@ -9,7 +9,8 @@ public class StartMain {
 		System.out.println("Kornel");
 		System.out.println("Kacper");
 		System.out.println("Kamil");
-		System.out.println("Antek);
+		System.out.println("Antek");
+		System.out.println("KacperB");
 		
 	}
 }
