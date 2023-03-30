@@ -14,6 +14,6 @@ public class StartMain {
 		System.out.println("Mateusz");
 		System.out.println("Kordian");
 		System.out.println("Mikołaj");
-		
+		System.out.println("MikołajS");
 	}
 }
