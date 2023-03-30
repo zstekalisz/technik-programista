@@ -6,6 +6,7 @@ public class StartMain {
 		System.out.println("Radek");
 		System.out.println("Grzegorz");
 		System.out.println("Miłosz");
+		System.out.println("Kornel");
 
 	}
 }
