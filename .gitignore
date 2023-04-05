@@ -1,4 +1,7 @@
 .classpath
 .project
 .settings
+.idea
+.mvn
+target
 bin
