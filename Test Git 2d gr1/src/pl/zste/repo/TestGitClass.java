@@ -33,6 +33,8 @@ public class TestGitClass {
 		System.out.println("konflikt");
 		
 		System.out.println("Filip123");
+
+		System.out.println("kONFLIKT2");
 		System.out.println("konflikt3");
 	}
 }
