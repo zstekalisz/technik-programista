@@ -1,0 +1,24 @@
+package pl.zste.rest.config;
+
+import org.apache.tomcat.jdbc.pool.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@Configuration
+@EnableTransactionManagement
+public class DatabaseConfiguration {
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
+        LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
+        factoryBean.setDataSource(dataSource);
+        return factoryBean;
+    }
+
+}
