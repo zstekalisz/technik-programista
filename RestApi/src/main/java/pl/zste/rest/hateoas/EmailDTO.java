@@ -7,11 +7,18 @@ import pl.zste.rest.model.Email;
 
 @Relation(value = "email",collectionRelation = "emails")
 public class EmailDTO extends RepresentationModel<EmailDTO> {
+    private Long id;
     private String email;
 
-
     public EmailDTO(Email email) {
+        this.id = email.getId();
         this.email = email.getEmail();
+    }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEmail() {

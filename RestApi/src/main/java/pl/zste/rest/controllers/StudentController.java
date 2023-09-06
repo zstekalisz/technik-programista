@@ -40,19 +40,21 @@ public class StudentController {
         return collectionModel;
     }
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Student> addNewStudent(@RequestBody Student student){
+    public ResponseEntity<StudentDTO> addNewStudent(@RequestBody Student student){
         Student saved = endpoint.saveStudentInDatabase(student);
-        return ResponseEntity.ok(saved);
+        StudentDTO savedDTO = studentDTOAssembler.toModel(saved);
+        return ResponseEntity.ok(savedDTO);
     }
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public  ResponseEntity<Student> editStudent(@PathVariable Long id, @RequestBody Student student){
+    public  ResponseEntity<StudentDTO> editStudent(@PathVariable Long id, @RequestBody Student student){
         Student studentFromDB = endpoint.getStudentById(id);
         studentFromDB.setName(student.getName());
         studentFromDB.setSurname(student.getSurname());
         studentFromDB.setClassNumber(student.getClassNumber());
         studentFromDB.getEmail().setEmail(student.getEmail().getEmail());
         Student updateStudent = endpoint.updateStudent(studentFromDB);
-        return ResponseEntity.ok(updateStudent);
+        StudentDTO updateStudentDTO = studentDTOAssembler.toModel(updateStudent);
+        return ResponseEntity.ok(updateStudentDTO);
     }
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteStudent(@PathVariable Long id){

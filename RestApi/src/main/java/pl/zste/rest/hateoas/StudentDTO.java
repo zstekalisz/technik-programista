@@ -6,6 +6,7 @@ import pl.zste.rest.model.Student;
 @Relation(value = "student", collectionRelation = "students")
 public class StudentDTO extends RepresentationModel<StudentDTO> {
 
+    private Long id;
     private String name;
     private String surname;
     private String speciality;
@@ -14,13 +15,19 @@ public class StudentDTO extends RepresentationModel<StudentDTO> {
     private static EmailDTOAssembler emailDTOAssembler = new EmailDTOAssembler();
 
     public StudentDTO(Student student) {
+        this.id = student.getId();
         this.name = student.getName();
         this.surname = student.getSurname();
         this.speciality = student.getSpeciality();
         this.classNumber = student.getClassNumber();
         this.email = emailDTOAssembler.toModel(student.getEmail());
     }
-
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getName() {
         return name;
     }
