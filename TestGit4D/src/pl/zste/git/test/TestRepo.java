@@ -5,6 +5,8 @@ public class TestRepo {
 		System.out.println("Radek commit");
 		
 		System.out.println("The bite of 87");
+		
+		System.out.println("Piate jutro wolne");
 	}
 
 }
