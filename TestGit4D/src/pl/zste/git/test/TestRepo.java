@@ -6,7 +6,7 @@ public class TestRepo {
 		
 		System.out.println("The bite of 87");
 		
-		System.out.println("Piate jutro wolne");
+		System.out.println("Piątek jutro wolne");
 	}
 
 }
