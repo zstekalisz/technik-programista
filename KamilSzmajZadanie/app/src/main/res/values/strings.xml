@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SZYMON DziK zAdANIE</string>
+    <string-array name="MENU">
+        <item>Kawy</item>
+        <item>Przekaski</item>
+        <item>Kafeteria</item>
+    </string-array>
+</resources>
