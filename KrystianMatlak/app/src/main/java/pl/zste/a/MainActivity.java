@@ -1,4 +1,4 @@
-package pl.zste.a;
+package com.example.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
