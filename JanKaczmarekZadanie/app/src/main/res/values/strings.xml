@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JanKaczmarekZadanie</string>
+    <string-array name="menu">
+    <item>Kawy</item>
+    <item>Przekąski</item>
+    <item>Kafeteria</item>
+    </string-array>d
+</resources>
