@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Krystian Matlak</string>
+    <string name="app_name">Krystian_Matlak_zadanie</string>
+    <string-array name="menu">
+        <item>Kawa</item>
+        <item>Dania</item>
+        <item>Piwa</item>
+    </string-array>
 </resources>
