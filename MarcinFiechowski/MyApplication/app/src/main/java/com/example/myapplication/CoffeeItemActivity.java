@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.model.Coffee;
 import com.example.utils.StaticDataBase;
@@ -40,6 +41,7 @@ public class CoffeeItemActivity extends AppCompatActivity {
         TextView desc = (TextView) findViewById(R.id.description);
         TextView name = (TextView) findViewById(R.id.name);
         name.setText(coffee.getName());
+        Toast.makeText(this, coffee.getName(), Toast.LENGTH_SHORT).show();
         desc.setText(coffee.getDescription());
         imageView.setImageResource(coffee.getPicture());
         
