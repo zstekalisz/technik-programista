@@ -8,18 +8,20 @@
 
     <ImageView
         android:id="@+id/coffee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="600px"
+        android:layout_height="600px"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/murzynek" />
+        tools:srcCompat="@drawable/piwo2137" />
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="115dp"
+        android:layout_width="290dp"
         android:layout_height="21dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="176dp"
