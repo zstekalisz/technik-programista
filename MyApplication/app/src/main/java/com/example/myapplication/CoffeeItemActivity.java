@@ -22,7 +22,8 @@ public class CoffeeItemActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.coffee);
         TextView desc = (TextView) findViewById(R.id.description);
         TextView name = (TextView) findViewById(R.id.name);
-        
-
+        imageView.setImageResource(coffee.getPicture());
+        desc.setText(coffee.getDescription());
+        name.setText(coffee.getName());
     }
 }
