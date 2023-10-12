@@ -2,6 +2,7 @@ package com.example.utiles;
 
 import com.example.model.Coffee;
 import com.example.model.Dania;
+import com.example.model.Piwa;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class StaticDateBase {
 
     public static List<Dania> danias = new ArrayList<>() ;
 
-//    public static List<Piwa> piwas = new ArrayList<>();
+    public static List<Piwa> piwas = new ArrayList<>();
     static {
         coffies.add(new Coffee(0, "Espresso", "Espresso serwowane w małej, ogrzanej przed podaniem filiżance " +
                 "o pojemności ok. 70 ml, wypełnia ją do połowy." +
@@ -27,5 +28,11 @@ public class StaticDateBase {
                 "powodu lenistwa pewnej osoby(mnie) są z makaronem",R.drawable.golabki_z_makaronem));
         danias.add(new Dania(2,"Krupnik","zupa na wywarze jarzynowym lub mięsnym zasypana kaszą jęczmienną," +
                 " z ziemniakami lub ryżem(głównie z ziemnakami)",R.drawable.krupnik));
+        piwas.add(new Piwa(0,"Lech","marka piwa produkowanego przez browar Lech Browary " +
+                "Wielkopolski należący do Kompanii Piwowarskiej",R.drawable.lech));
+        piwas.add(new Piwa(1,"Żubr","marka jasnego, pasteryzowanego piwa, na bazie słodu jęczmiennego" +
+                " warzonego przez koncern Kompania Piwowarska SA. Zawiera 12,1% ekstraktu oraz 6,0% alkoholu.",R.drawable.zubr));
+        piwas.add(new Piwa(2,"Tatra","marka piwa produkowana przez Browar Elbląg, Browar Leżajsk i Browar Warka" +
+                " należące do Grupy Żywiec",R.drawable.tatra));
     }
 }
