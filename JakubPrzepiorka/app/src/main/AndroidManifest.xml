@@ -13,7 +13,7 @@
         android:theme="@style/Theme.JakubPrzepiorka"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".myapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.app.myapp.SnackActivity" />
+        <activity android:name="com.example.app.myapp.CoffeeActivity" />
+        <activity android:name="com.example.app.myapp.CoffeeItemActivity" />
+        <activity android:name="com.example.app.myapp.SnackItemActivity" />
+        <activity android:name="com.example.app.myapp.DrinkActivity" />
+        <activity android:name="com.example.app.myapp.DrinkItemActivity" />
     </application>
 
 </manifest>
