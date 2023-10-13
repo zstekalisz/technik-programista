@@ -1,4 +1,4 @@
-package pl.zste.app;
+package com.example.myapplication;
 
 import org.junit.Test;
 

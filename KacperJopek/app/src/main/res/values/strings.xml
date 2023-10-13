@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">KacperJopek</string>
+    <string name="app_name">My Application</string>
+    <string-array name="coffies">
+        <item>Kawy</item>
+        <item>Napoje zimne</item>
+        <item>Śniadania</item>
+    </string-array>
 </resources>
