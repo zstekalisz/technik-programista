@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/murzynek" />
+        tools:srcCompat="@drawable/mohito" />
 
     <TextView
         android:id="@+id/name"
