@@ -22,6 +22,16 @@ public class KonsolaOsoby {
 				continue;
 			}
 			System.out.print("Podaj nazwisko:");
+			String nazwisko = scanner.nextLine();
+			if(imie.equals("exit")) {
+				break;
+			}else if(imie.equals("ile")) {
+				StatycznaBazaOsob.wyswietlLiczbeOsob();
+				continue;
+			}else if(imie.equals("wszyscy")) {
+				StatycznaBazaOsob.wypiszOsobyWKonsoli();
+				continue;
+			}
 			//TODO dopisać wszyscy - metoda wyświetl wszystkich
 			//TODO dopisać dodawanie osób do bazy statycznej
 			
