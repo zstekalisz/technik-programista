@@ -13,6 +13,18 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".PiwaItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PiwaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaniaItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaniaActivity"
+            android:exported="false" />
+        <activity
             android:name=".CoffeeItemActivity"
             android:exported="false" />
         <activity
