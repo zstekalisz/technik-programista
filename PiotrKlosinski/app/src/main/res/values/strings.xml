@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">PiotrKlosinski</string>
+    <string name="app_name">Aplikacja</string>
+    <string-array name="coffies">
+        <item>Kawy</item>
+        <item>Napoje luksusowe</item>
+        <item>Zakąski</item>
+    </string-array>
+
 </resources>
