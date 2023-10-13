@@ -2,6 +2,7 @@ package pl.zste.console;
 
 import java.util.Scanner;
 
+import pl.zste.osoby.Osoba;
 import pl.zste.utils.StatycznaBazaOsob;
 
 public class KonsolaOsoby {
@@ -32,8 +33,8 @@ public class KonsolaOsoby {
 				StatycznaBazaOsob.wypiszOsobyWKonsoli();
 				continue;
 			}
-			//TODO dopisać wszyscy - metoda wyświetl wszystkich
-			//TODO dopisać dodawanie osób do bazy statycznej
+			Osoba osoba = new Osoba(StatycznaBazaOsob.getCurrentId(), imie, nazwisko);
+			StatycznaBazaOsob.dodajOsobe(osoba);
 			
 		}
 		

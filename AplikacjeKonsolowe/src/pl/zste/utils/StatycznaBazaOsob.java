@@ -8,9 +8,11 @@ import pl.zste.osoby.Osoba;
 public class StatycznaBazaOsob {
 	
 	private static List<Osoba> osoby = new ArrayList<>();
+	private static int id = 0;
 	
 	public static void dodajOsobe(Osoba osoba) {
 		osoby.add(osoba);
+		id++;
 	}
 	
 	public static void wyswietlLiczbeOsob() {
@@ -25,6 +27,10 @@ public class StatycznaBazaOsob {
 //			System.out.println(os);
 //		}
 		osoby.forEach(o-> System.out.println(o));
+	}
+	
+	public static int getCurrentId() {
+		return id +1;
 	}
 
 }
