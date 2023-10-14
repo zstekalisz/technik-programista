@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'pl.zste.o'
+    namespace 'com.example.myapplication'
     compileSdk 33
 
     defaultConfig {
-        applicationId "pl.zste.o"
+        applicationId "com.example.myapplication"
         minSdk 26
         targetSdk 33
         versionCode 1

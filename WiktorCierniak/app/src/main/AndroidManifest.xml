@@ -13,14 +13,35 @@
         android:theme="@style/Theme.WiktorCierniak"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".myapplication.AlkoholItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.MainActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".myapplication.AlkoholActivity$AlkoholItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.AlkoholActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.NapojeItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.NapojeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.CoffeeItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myapplication.CoffeeActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

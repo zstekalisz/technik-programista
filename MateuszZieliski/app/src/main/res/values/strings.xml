@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">MateuszZieliński</string>
+    <string name="app_name">Mateusz Zieliński</string>
+    <string-array name="kawa">
+        <item>Kawy</item>
+        <item>Przekąski</item>
+        <item>Drinki</item>
+    </string-array>
 </resources>
