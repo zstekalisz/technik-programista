@@ -1,6 +1,6 @@
 R_DEF: Internal format may change without notice
 local
-array café
+array cafe
 color black
 color white
 drawable amudsen
