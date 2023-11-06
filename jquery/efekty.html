@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <script src="efekty.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="page">
+            <button id="pokaz">POKAŻ</button>
+            <button id="ukryj">UKRYJ</button>
+            <button id="przelacz">PRZEŁĄCZ</button><br />
+            <img style="display:none" src="iphone.jpg"/>
+        </div>
+    </div>
+    <div id="container2">
+        <div id="page2" style="height: 250px;">
+            <button id="wysun1">SLIDE DOWN</button>
+            <button id="wysun2">SLIDE UP</button>
+            <button id="wysun3">FADE TO</button><br />
+            <div id="pierwszy" class="prostokat"></div>
+            <div id="drugi" class="prostokat"></div>
+            <div id="trzeci" class="prostokat"></div>
+            <div style="clear: both;"></div>
+
+        </div>
+    </div>
+    <style>
+        .prostokat{
+            border: 1px solid black;
+            width: 200px;
+            height: 150px;
+            background: blue;
+            margin: 0 20px;
+            float: left;
+        }
+    </style>
+    
+</body>
+</html>
