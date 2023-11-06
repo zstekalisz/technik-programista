@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script src="formularz.js"></script>
+</head>
+<body>
+    
+    <label for="imie">Wpisz imię</label>
+    <input id="imie" type="text" placeholder="Podaj imię"> <br />
+    
+    <label for="nazwisko">Wpisz nazwisko</label>
+    <input id="nazwisko" type="text" placeholder="Podaj nazwisko"> <br />
+    
+    <select>
+        <option value="1">Java</option>
+        <option value="2">C++</option>
+        <option value="3">PHP</option>
+    </select><br />
+    <input id="java" type="radio" name="gr1" value="Java">
+    <label for="java">Java</label>
+    <input id="cpp" type="radio" name="gr1">
+    <label for="cpp">C++</label>
+    <input id="php" type="radio" name="gr1">
+    <label for="php">PHP</label>
+    <div id="radio"></div>
+    <form id="test">
+        <input type="text" placeholder="podaj imię">
+        <input type="text" placeholder="podaj nazwisko">
+        <button type="submit">Zapisz</button>
+    </form>
+    
+</body>
+<style>
+    span{
+        color : red;
+    }
+</style>
+</html>
