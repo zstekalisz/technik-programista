@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aplikacja 2022 zima</string>
+    <string name="title">Resetuj konto</string>
+    <string name="email">Podaj e-mail</string>
+    <string name="save">ZATWIERDŹ</string>
+    <string name="pass">Podaj hasło</string>
+    <string name="passRepeat">Powtórz hasło</string>
+</resources>
