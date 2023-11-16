@@ -2,8 +2,16 @@ package pl.zste.zadanieegzamin.arkusz2;
 
 public class EuklidesNWD {
 	
+	/**
+	 * @author Kamil Szmaj
+	 * nazwa : obliczNWD
+	 * opis : funkcja przyjmuje dwa parametry, które s¹ liczbami ca³kowitymi
+	 * @param a - liczba ca³kowita
+	 * @param b - liczba ca³kowita
+	 * @return - to co zwraca funkcja
+	 */
 	public static int obliczNWD(int a, int b) {
-		if(a!=b) {
+		while(a!=b) {
 			//tak
 			if(a>b) {
 				//tak
@@ -12,10 +20,9 @@ public class EuklidesNWD {
 				//nie
 				b=b-a;
 			}
-		}else {
+		}
 			//nie
 			return a;
-		}
 	}
 
 }
