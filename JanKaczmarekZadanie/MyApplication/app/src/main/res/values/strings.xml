@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Janek Kaczmarek</string>
-    <string-array name="kawusia">
-        <item>kawy</item>
-        <item>Ciasto</item>
-        <item>Herbata</item>
-    </string-array>
-</resources>

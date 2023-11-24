@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Jakub Przepiórka</string>
-    <string-array name="coffies">
-        <item>Kawy</item>
-        <item>Przekąski</item>
-        <item>Zimne napoje</item>
-    </string-array>
-
-</resources>

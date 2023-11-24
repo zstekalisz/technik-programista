@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">My Application</string>
-    <string-array name="coffies">
-        <item>Kawy</item>
-        <item>Driny</item>
-        <item>Zagrycha</item>
-    </string-array>
-
-</resources>
