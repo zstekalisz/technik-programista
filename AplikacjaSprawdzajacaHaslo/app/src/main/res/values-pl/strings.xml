@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AplikacjaSprawdzajacaHaslo</string>
+    <string name="enterPass">Wpisz hasło</string>
+    <string name="repeatPass">Powtórz hasło</string>
+    <string name="checkButton">Sprawdź</string>
+    <string name="messageok">Hasło poprawne</string>
+    <string name="messageerror">Hasło niepoprawne</string>
+
+
+</resources>
