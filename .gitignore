@@ -3,5 +3,6 @@
 .settings
 .idea
 .mvn
+.jar
 target
 bin
