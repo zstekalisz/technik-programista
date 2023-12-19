@@ -96,6 +96,15 @@ public class MetodyInterfaceListGr1 {
 			}
 		});
 		System.out.println(komputery);
+		komputery.sort(new Comparator<Komputer>() {
+			@Override
+			public int compare(Komputer o1, Komputer o2) {
+				return o2.compareTo(o1);
+			}
+
+		});
+		System.out.println(komputery);
+		komputery.sort(        (komp1, komp2)-> komp1.compareTo(komp2)       );
 		
 	}
 
