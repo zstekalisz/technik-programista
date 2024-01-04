@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WiktorCierniak</string>
+    <string-array name="coffies">
+        <item>Kawy</item>
+        <item>Napoje</item>
+        <item>Alkohole</item>
+    </string-array>
+</resources>

@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+array coffies
+color black
+color white
+drawable cappucino
+drawable espresso
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable kafeteria
+drawable kamikaze
+drawable lattemacchiato
+drawable mojito
+drawable ogorek
+drawable pies
+drawable pizza
+drawable pomidor
+id coffee
+id coffeeTypes
+id description
+id imageView
+id imageView2
+id listView
+id name
+layout activity_coffee
+layout activity_coffee_item
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MyApplication
+style Theme.MyApplication
+xml backup_rules
+xml data_extraction_rules

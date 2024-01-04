@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dawid Szmaj</string>
+    <string-array name="cafe">
+        <item>Kawy</item>
+        <item>Wódka</item>
+        <item>Ciasta</item>
+    </string-array>
+</resources>

@@ -1,0 +1,122 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.myapplication"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="33" />
+10
+11    <permission
+11-->[androidx.core:core:1.9.0] C:\Users\Radek\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.9.0] C:\Users\Radek\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.9.0] C:\Users\Radek\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.9.0] C:\Users\Radek\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] C:\Users\Radek\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:5:5-42:19
+18        android:allowBackup="true"
+18-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:6:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.9.0] C:\Users\Radek\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:7:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:8:9-54
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:9:9-43
+25        android:label="@string/app_name"
+25-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:10:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:11:9-54
+27        android:supportsRtl="true"
+27-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:12:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.MyApplication" >
+29-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:13:9-51
+30        <activity
+30-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:15:9-17:40
+31            android:name="com.example.myapplication.PiwaItemActivity"
+31-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:16:13-45
+32            android:exported="false" />
+32-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:17:13-37
+33        <activity
+33-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:18:9-20:40
+34            android:name="com.example.myapplication.PiwaActivity"
+34-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:19:13-41
+35            android:exported="false" />
+35-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:20:13-37
+36        <activity
+36-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:21:9-23:40
+37            android:name="com.example.myapplication.DaniaItemActivity"
+37-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:22:13-46
+38            android:exported="false" />
+38-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:23:13-37
+39        <activity
+39-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:24:9-26:40
+40            android:name="com.example.myapplication.DaniaActivity"
+40-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:25:13-42
+41            android:exported="false" />
+41-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:26:13-37
+42        <activity
+42-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:27:9-29:40
+43            android:name="com.example.myapplication.CoffeeItemActivity"
+43-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:28:13-47
+44            android:exported="false" />
+44-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:29:13-37
+45        <activity
+45-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:30:9-32:40
+46            android:name="com.example.myapplication.CoffeeActivity"
+46-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:31:13-43
+47            android:exported="false" />
+47-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:32:13-37
+48        <activity
+48-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:33:9-41:20
+49            android:name="com.example.myapplication.MainActivity"
+49-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:34:13-41
+50            android:exported="true" >
+50-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:35:13-36
+51            <intent-filter>
+51-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:36:13-40:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:37:17-69
+52-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:37:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:39:17-77
+54-->C:\Users\Radek\git\technik-programista\KrystianMatlak\app\src\main\AndroidManifest.xml:39:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.myapplication.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Radek\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Radek\.gradle\caches\transforms-3\b53648139df62eed3ac1693b02c07adb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Radek\.gradle\caches\transforms-3\b53648139df62eed3ac1693b02c07adb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Radek\.gradle\caches\transforms-3\b53648139df62eed3ac1693b02c07adb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+68        </provider>
+69    </application>
+70
+71</manifest>

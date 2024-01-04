@@ -10,6 +10,7 @@ import pl.zste.model.TrenagerListClicker;
 
 public class MainActivity extends AppCompatActivity implements TrenagerListClicker {
 
+    public final static String INTENT_KEY = "index";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +20,8 @@ public class MainActivity extends AppCompatActivity implements TrenagerListClick
 
     @Override
     public void setTraining(int indexOfWorkout) {
-        //Intent intent = new Intent(this, null);
-        //intent.putExtra("index", indexOfWorkout);
-        //startActivity(intent);
-        Log.i("TEST", "Kliknięto "+indexOfWorkout+ " element listy");
+        Intent intent = new Intent(this, WorkoutDetailActivity.class);
+        intent.putExtra(MainActivity.INTENT_KEY, indexOfWorkout);
+        startActivity(intent);
     }
 }

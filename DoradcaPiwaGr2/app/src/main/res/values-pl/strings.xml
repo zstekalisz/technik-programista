@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Doradca piwny</string>
+    <string name="button">Odszukaj piwo!</string>
+    <string-array name="beer_colors">
+        <item>jasne</item>
+        <item>bursztynowe</item>
+        <item>brązowe</item>
+        <item>ciemne</item>
+    </string-array>
+</resources>
