@@ -1,0 +1,9 @@
+1. Utwórz aplikację mobilną która będzie składała się z dwóch aktywności.
+2. Pierwsza aktywność będzie zawierała fragment z rozkładem liniowym horyzontalnym a w nim będą dwa przyciski z napisami
+Choinka i Nowy rok.
+3. Fragment może być wykorzystywany w innych aktywnościach, dlatego nie może on obsługiwać procesu utworzenia intencji przekierowania użytkownika do drugiej aktywności.
+4. Obsługa kliknięć przycisków musi znaleźć się w klasie aktywności.
+5. Druga aktywność składa się z fragmentu który zawiera ImageView.
+6. Po kliknięciu przycisku z napisem Choinka pierwsza aktywność przekieruje użytkownika do drugiej aktywności i zostanie wyświetlony obrazek choinki. Analogicznie po kliknięciu przycisku z napisem Nowy rok, użytkownik również zostanie przekierowany do drugiej aktywności gdzie zostanie mu przedstawiony obrazek prezentujący nowy rok.
+
+Pliki graficzne w załączeniu.
