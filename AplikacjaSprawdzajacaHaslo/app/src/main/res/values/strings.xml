@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AplicationPasswordCheck</string>
+    <string name="enterPass">Enter password</string>
+    <string name="repeatPass">Repeat password</string>
+    <string name="checkButton">Check passwords</string>
+    <string name="messageok">Password is valid</string>
+    <string name="messageerror">Password is invalid</string>
+</resources>
