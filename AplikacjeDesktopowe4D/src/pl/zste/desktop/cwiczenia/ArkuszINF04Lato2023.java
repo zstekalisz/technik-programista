@@ -13,16 +13,21 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 
 public class ArkuszINF04Lato2023 {
 
-	private JFrame frame;
+	private JFrame frmNadajPrzesykPesel;
 	private JTextField street;
 	private JTextField postCode;
 	private JTextField city;
@@ -35,7 +40,7 @@ public class ArkuszINF04Lato2023 {
 			public void run() {
 				try {
 					ArkuszINF04Lato2023 window = new ArkuszINF04Lato2023();
-					window.frame.setVisible(true);
+					window.frmNadajPrzesykPesel.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -54,15 +59,16 @@ public class ArkuszINF04Lato2023 {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 767, 456);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmNadajPrzesykPesel = new JFrame();
+		frmNadajPrzesykPesel.setTitle("Nadaj przesyłkę PESEL 00000000000");
+		frmNadajPrzesykPesel.setBounds(100, 100, 767, 456);
+		frmNadajPrzesykPesel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmNadajPrzesykPesel.getContentPane().setLayout(null);
 		
 		Box verticalBox = Box.createVerticalBox();
 		verticalBox.setBorder(new TitledBorder(new LineBorder(new Color(128, 128, 128), 2, true), "Rodzaj przesy\u0142ki", TitledBorder.LEFT, TitledBorder.TOP, null, null));
 		verticalBox.setBounds(48, 36, 283, 127);
-		frame.getContentPane().add(verticalBox);
+		frmNadajPrzesykPesel.getContentPane().add(verticalBox);
 		
 		JPanel panel = new JPanel();
 		verticalBox.add(panel);
@@ -90,7 +96,7 @@ public class ArkuszINF04Lato2023 {
 		Box verticalBox_1 = Box.createVerticalBox();
 		verticalBox_1.setBorder(new TitledBorder(new LineBorder(new Color(128, 128, 128), 2, true), "Dane adresowe", TitledBorder.LEFT, TitledBorder.TOP, null, null));
 		verticalBox_1.setBounds(391, 36, 325, 287);
-		frame.getContentPane().add(verticalBox_1);
+		frmNadajPrzesykPesel.getContentPane().add(verticalBox_1);
 		
 		JPanel panel_1 = new JPanel();
 		verticalBox_1.add(panel_1);
@@ -125,7 +131,7 @@ public class ArkuszINF04Lato2023 {
 		
 		JButton priceButton = new JButton("Sprawdź cenę");
 		priceButton.setBounds(48, 189, 283, 21);
-		frame.getContentPane().add(priceButton);
+		frmNadajPrzesykPesel.getContentPane().add(priceButton);
 		
 		ImageIcon icon = new ImageIcon("res/pocztowka.png");
 		
@@ -134,11 +140,11 @@ public class ArkuszINF04Lato2023 {
 		image.setFont(new Font("Tahoma", Font.BOLD, 16));
 		image.setBounds(48, 230, 283, 89);
 		image.setIcon(icon);
-		frame.getContentPane().add(image);
+		frmNadajPrzesykPesel.getContentPane().add(image);
 		
 		JButton submit = new JButton("Zatwierdź");
 		submit.setBounds(48, 352, 668, 21);
-		frame.getContentPane().add(submit);
+		frmNadajPrzesykPesel.getContentPane().add(submit);
 		
 		priceButton.addActionListener(new ActionListener() {//anonimowa klasa wewnętrzna
 			
@@ -160,6 +166,28 @@ public class ArkuszINF04Lato2023 {
 				
 			}
 		});
-		submit.addAc
+		submit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String text = postCode.getText();
+				String validationMessage = ArkuszINF04Lato2023.getValidationMessage(text);
+				JOptionPane.showMessageDialog(frmNadajPrzesykPesel, validationMessage);
+			}
+		});
+	}
+	public static String getValidationMessage(String text) {
+		List<String> numbers = Arrays.asList("0", "1", "2","3", "4", "5","6","7","8","9");
+		String[] split = text.split("");
+		for(int i=0 ; i< split.length; i++) {
+			boolean contains = numbers.contains(split[i]);
+			if(!contains) {
+				return "Kod pocztowy powinien się składać z samych cyfr";
+			}
+		}
+		if(text.length()==5) {
+			return "Dane przesyłki zostały wprowadzone";
+		}
+		return "Nieprawidłowa liczba cyfr w kodzie pocztowym";
 	}
 }
