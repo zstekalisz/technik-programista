@@ -18,10 +18,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.SwingConstants;
+import javax.swing.JTextField;
 
 public class ArkuszINF04Lato2023 {
 
 	private JFrame frame;
+	private JTextField street;
+	private JTextField postCode;
+	private JTextField city;
 
 	/**
 	 * Launch the application.
@@ -92,6 +96,33 @@ public class ArkuszINF04Lato2023 {
 		verticalBox_1.add(panel_1);
 		panel_1.setLayout(null);
 		
+		JLabel lblNewLabel = new JLabel("Ulica z numerem");
+		lblNewLabel.setBounds(25, 13, 280, 20);
+		panel_1.add(lblNewLabel);
+		
+		street = new JTextField();
+		street.setBounds(25, 43, 260, 20);
+		panel_1.add(street);
+		street.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Kod pocztowy");
+		lblNewLabel_1.setBounds(25, 92, 280, 20);
+		panel_1.add(lblNewLabel_1);
+		
+		postCode = new JTextField();
+		postCode.setBounds(24, 122, 130, 20);
+		panel_1.add(postCode);
+		postCode.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("Miasto");
+		lblNewLabel_2.setBounds(25, 166, 260, 20);
+		panel_1.add(lblNewLabel_2);
+		
+		city = new JTextField();
+		city.setBounds(25, 196, 260, 20);
+		panel_1.add(city);
+		city.setColumns(10);
+		
 		JButton priceButton = new JButton("Sprawdź cenę");
 		priceButton.setBounds(48, 189, 283, 21);
 		frame.getContentPane().add(priceButton);
@@ -129,5 +160,6 @@ public class ArkuszINF04Lato2023 {
 				
 			}
 		});
+		submit.addAc
 	}
 }
