@@ -36,7 +36,21 @@ public class MetodyInterfaceQueue {
 			System.out.println(pQueue.size());
 		}
 		Queue<Butelka> kolejkaButelek = new PriorityQueue<Butelka>();
-		//TODO dokończyć za tydzień dodawanie butelek do kolejki priorytetowej
+		Butelka butelka1 = new Butelka("CocaCola", 6);
+		Butelka butelka2 = new Butelka("mleko", 1);
+		Butelka butelka3 = new Butelka("olej", 3);
+		kolejkaButelek.add(butelka1);
+		kolejkaButelek.offer(butelka2);
+		kolejkaButelek.offer(butelka3);
+		
+		for(int i = 0; i< 4; i++) {
+			System.out.println(kolejkaButelek.poll());
+		}
+		
+		
+		
+		
+		
 	}
 
 }

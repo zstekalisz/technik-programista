@@ -8,69 +8,30 @@ import java.util.Queue;
 public class MetodyInterfejsuDeque {
 
 	public static void main(String[] args) {
-		Queue<String> fifo = new LinkedList<>();
+		Deque<String> stosImion = new LinkedList<String>();
+		stosImion.addFirst("Tomek");
+		stosImion.addFirst("Sylwia");
+		stosImion.addFirst("Przemek");
+		stosImion.addFirst("Barbara");
+		for(int i = 0; i< 4; i++) {
+			System.out.println(stosImion.pollFirst());
+		}
+		Stos<Integer> stos = new Stos<Integer>();
+		stos.dodajLiczbe(121212);
+		stos.dodajLiczbe(99800);
+		stos.dodajLiczbe(7766252);
+		stos.dodajLiczbe(9812345);
+		stos.dodajLiczbe(998756431);
+		stos.dodajLiczbe(12);
+		stos.dodajLiczbe(8765);
 		
-		Deque<String> deque = new LinkedList<>();
-		
-//		deque.addFirst("styczeń");
-//		deque.add("luty");
-//		deque.offer("marzec");
-//		deque.offerFirst("kwiecień");
-//		deque.push("maj");
-		
-		
-		//FIFO
-		deque.add("styczeń");
-		deque.add("luty");
-		deque.add("marzec");
-		deque.offer("kwiecień");
-		deque.offerLast("maj");
-		
-		for (String miesiac : deque) {
-			System.out.println(miesiac);
+		for(int i =0; i<10; i++) {
+			System.out.println(stos.zdejmijLiczbe());
 		}
 		
-		int licznik = deque.size();
-		
-		for(int i = 0; i< licznik; i++) {
-			System.out.println(deque.poll());
-			System.out.println(deque.size()); 
+		Stos<String> stos2 = new Stos<String>();
+
 			
-		}
-		
-		//LIFO 
-		
-		deque.add("styczeń");
-		deque.add("luty");
-		deque.add("marzec");
-		deque.offer("kwiecień");
-		deque.offerLast("maj");
-		
-		licznik = deque.size();
-		
-		for(int i = 0; i< licznik; i++) {
-			System.out.println(deque.pollLast());
-			System.out.println(deque.size()); 
-			
-		}
-		
-		//test iteratorów
-		deque.add("styczeń");
-		deque.add("luty");
-		deque.add("marzec");
-		deque.offer("kwiecień");
-		deque.offerLast("maj");
-		
-		Iterator<String> iterator = deque.iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
-		System.err.println("xxxxxxxxxxxxxxxxxxxxxxxx");
-		Iterator<String> iterator2 = deque.descendingIterator();
-		while (iterator2.hasNext()) {
-			System.out.println(iterator2.next());
-		}
-		
 	}
 
 	
