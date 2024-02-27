@@ -1,11 +1,13 @@
 package pl.zste.desktop.cwiczenia;
 
 import java.awt.EventQueue;
+import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -13,6 +15,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
 
 public class SitoErastotensa {
 
@@ -66,10 +70,19 @@ public class SitoErastotensa {
 		find.setBounds(40, 98, 416, 21);
 		frame.getContentPane().add(find);
 		
+		JPanel panel = new JPanel();
+		panel.setBounds(40, 150, 416, 160);
+		panel.setLayout(new BorderLayout(0, 0)); // musi być jakiś layout nie może byc null
+
+		
 		displayMessage = new JTextArea();
-		displayMessage.setBounds(40, 163, 416, 183);
+		displayMessage.setBounds(10, 10, 400, 140);
 		displayMessage.setLineWrap(true);
-		frame.getContentPane().add(displayMessage);
+		
+		JScrollPane scrollPane = new JScrollPane(displayMessage, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		panel.add(scrollPane);
+		
+		frame.getContentPane().add(panel);
 		
 		find.addActionListener(new ActionListener() {
 			
