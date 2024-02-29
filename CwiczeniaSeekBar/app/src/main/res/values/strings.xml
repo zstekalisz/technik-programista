@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CwiczeniaSeekBar</string>
+    <string name="progress">Postęp paska : </string>
+    <string name="przycisk">Wykonaj</string>
+</resources>
