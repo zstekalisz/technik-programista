@@ -5,7 +5,7 @@ public class Dom implements Comparable<Dom>{
 	public String nazwa;
 	public Integer priorytet;
 	
-	public Dom(String nazwa, int priorytet) {
+	public Dom(String nazwa, Integer priorytet) {
 		this.nazwa = nazwa;
 		this.priorytet = priorytet;
 	}
