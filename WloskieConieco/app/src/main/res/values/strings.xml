@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WloskieConieco</string>
+    <string name="hello_blank_fragment">Aplikacja gastronomia w ZSTE</string>
+    <string-array name="pizzas">
+        <item>Margarita</item>
+        <item>Capriciosa</item>
+        <item>Diavolo</item>
+        <item>Hawajska</item>
+        <item>Salami picante</item>
+    </string-array>
+</resources>
