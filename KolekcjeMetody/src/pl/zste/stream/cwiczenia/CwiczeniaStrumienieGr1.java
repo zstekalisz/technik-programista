@@ -2,7 +2,12 @@ package pl.zste.stream.cwiczenia;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class CwiczeniaStrumienieGr1 {
 
@@ -16,6 +21,7 @@ public class CwiczeniaStrumienieGr1 {
 		Film katyn = new Film(r2, "Katyń", GatunekFilmu.dramat, 90);
 		Film mis = new Film(r3, "Miś", GatunekFilmu.komedia, 90);
 		Film mafia = new Film(r4, "Kobiety mafii", GatunekFilmu.sensacyjny, 90);
+		Film terminator = new Film(r1, "Terminator", GatunekFilmu.sensacyjny, 120);
 		
 		Recenzja re1 = new Recenzja(1, "Za długi, nudny");
 		Recenzja re2 = new Recenzja(1, "Nie lubię, taki se");
@@ -42,10 +48,61 @@ public class CwiczeniaStrumienieGr1 {
 		filmy.add(katyn);
 		filmy.add(mis);
 		filmy.add(mafia);
+		filmy.add(terminator);
 		
 		//wypisz przy pomocy api strumieni wszystkich reżyserów filmów z kolekcji filmy
 		filmy.stream().map(f-> f.getRezyser()).forEach(r-> System.out.println(r));
-
+		
+		//pogrupuj filmy do mapy według rezysera (reżyser - lista filmów)
+		Map<Rezyser, List<Film>> mapa = filmy.stream().collect(Collectors.groupingBy(f-> f.getRezyser()));
+		Map<Rezyser, List<Film>> map2 = filmy.stream().collect(Collectors.groupingBy(Film::getRezyser));// to jest to samo co linia powyżej tylko inne wyrażenie lambda
+		mapa.forEach((r, lista)->{
+			System.out.println(r);
+			lista.forEach(f-> System.out.println(f));
+		});
+		
+		//pogrupuj filmy po gatunku filmy (gatunek, lista filmów)
+		Map<GatunekFilmu, List<Film>> mapa3 = filmy.stream().collect(Collectors.groupingBy(f-> f.getGatunek()));
+		mapa3.forEach((k,v)-> {
+			System.out.println(k.name());
+			v.forEach(f-> System.out.println(f));
+		});
+		
+		//z listy filmów utwórz listę rezyserów
+		List<Rezyser> rezyserzy = filmy.stream().map(f-> f.getRezyser()).collect(Collectors.toList());
+		System.out.println("xxxxxxxxxxxxx");
+		rezyserzy.forEach(r-> System.out.println(r));
+		
+		//z listy filmów utwórz listę rezyserów którzy mają na imię Andrzej
+		List<Rezyser> rezyserzyAndrzeje = filmy.stream()
+				.map(f-> f.getRezyser())
+				.filter(r-> r.getImie().equals("Andrzej"))
+				.collect(Collectors.toList());
+		rezyserzyAndrzeje.forEach(r-> System.out.println(r));
+		
+		//sprawdz czy lista filmów zawiera filmy bez recenzji
+		boolean czySaFilmyBezRecenzji = filmy.stream().anyMatch(f-> {
+			return f.getRecenzje()!=null && f.getRecenzje().isEmpty() ;
+		});
+		String takNie = czySaFilmyBezRecenzji ? "Tak" : "Nie";
+		System.out.println("Czy mamy filmy bez recenzji "+ takNie);
+		
+		//policz ile masz filmów sensacyjnych w liście filmów
+		long sensacyjne = filmy.stream().filter(f-> f.getGatunek().equals(GatunekFilmu.sensacyjny)).count();
+		System.out.println("Filmy sensacyjne sztuk :"+ sensacyjne);
+		
+		//powiedz ile wynosi czas trwania wszytskich filmów
+		Optional<Integer> reduce = filmy.stream()
+				.map(f-> f.getCzasTrwaniaWMinutach())
+				.reduce((cz1, cz2)-> cz1+cz2);
+		
+		Integer reduce2 = filmy.stream()
+				.map(f-> f.getCzasTrwaniaWMinutach())
+				.reduce(0,(cz1, cz2)-> cz1+cz2);
+		if(reduce.isPresent()) {
+			System.out.println(reduce.get());
+		}
+		System.out.println(reduce2);
 	}
 
 }
