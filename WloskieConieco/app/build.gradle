@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'pl.zste.app'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "pl.zste.app"

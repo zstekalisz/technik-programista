@@ -15,4 +15,10 @@
         <item>Gdańsk</item>
         <item>Opatówek</item>
     </string-array>
+
+    <string name="start">Start</string>
+    <string name="pizza">Pizze</string>
+    <string name="pasta">Makarony</string>
+    <string name="pizza_store">Pizzerie</string>
+
 </resources>
