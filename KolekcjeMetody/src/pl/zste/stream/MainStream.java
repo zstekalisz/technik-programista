@@ -112,6 +112,46 @@ public class MainStream {
 		//sprawdz czy wszystkie butelki mają priorytet większy od 0
 		boolean czyPrioWiekszyZero = butelki.stream().allMatch(b-> b.priorytet>0);
 		
+		//pogrupuj butelki po priorytecie
+		Map<Integer, List<Butelka>> collect = butelki.stream().collect(Collectors.groupingBy(b-> b.priorytet));
+		
+		//utwórz listę priorytetów butelek
+		List<Integer> collect2 = butelki.stream().map(b-> b.priorytet).collect(Collectors.toList());
+		
+		//policz sumę priorytetów butelek, które priorytet mają większy od 5
+		Integer prioSumWiekszePiec = butelki.stream()
+			.filter(b-> b.priorytet>5)
+			.map(b-> b.priorytet)
+			.reduce(0, (a1, a2)-> a1+a2);
+		System.out.println(prioSumWiekszePiec);
+		
+		//Utwórz listę nazw butelek bez nulli
+		butelki.stream()
+			.filter(b-> b.nazwa!=null)
+			.map(b-> b.nazwa)
+			.collect(Collectors.toList());
+		
+		//Utwórz listę priorytetów większych od 7 i nie zawierającej duplikatów
+		butelki.stream()
+			.filter(b-> b.priorytet>7)
+			.map(b-> b.priorytet)
+			.distinct()
+			.collect(Collectors.toList());
+		
+		//znajdz butelkę która ma priorytet równy 3
+		Optional<Butelka> findAny = butelki.stream().filter(b-> b.priorytet==3).findAny();
+		if(findAny.isPresent()) {
+			System.out.println(findAny.get());
+		}
+		// to samo tylko zapisane inaczej
+		butelki.stream().filter(b-> b.priorytet==3).findAny().ifPresent(b-> System.out.println(b));
+		
+		// znajdz butelkę która ma najniższy priorytek z butelek o priorytecie większym niż 5
+		butelki.stream()
+			.filter(b-> b.priorytet>5)
+			.min((bu1, bu2)-> bu1.priorytet.compareTo(bu2.priorytet))
+			.ifPresent(b-> System.out.println(b));
+			
 		
 	}
 
