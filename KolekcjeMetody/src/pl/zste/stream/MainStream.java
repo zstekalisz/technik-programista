@@ -88,6 +88,31 @@ public class MainStream {
 			System.out.println(suma);
 		}
 		
+		//sprawdz czy w butelkach znajduje się taka która nie ma nazwy
+		long ileButelekMaPustaNazwe = butelki.stream().filter(b-> b.nazwa==null).count();
+		if(ileButelekMaPustaNazwe>0) {
+			System.out.println("Są butelki których nazwa jest pusta");
+		}
+		//to samo co powyżej tylko metoda any
+		boolean anyMatchButelkiNazwaNull = butelki.stream().anyMatch(b-> b.nazwa==null);
+		if(anyMatchButelkiNazwaNull) {
+			System.out.println("Są butelki których nazwa jest pusta");
+		}
+		//wskaż liczbę butelek których priorytet jest większy od 5
+		long liczbaButelekPrioWiekszePiec = butelki.stream().filter(b-> b.priorytet>5).count();
+		
+		//utwórz listę butelek których priorytet jest równy 5
+		List<Butelka> butelkiPrio5 = butelki.stream().filter(b-> b.priorytet==5).collect(Collectors.toList());
+		
+		//utwórz listę butelek których priorytek jest <6 i których nazwa jest dłuższa od <9
+		List<Butelka> butelkiList = butelki.stream()
+				.filter(b->b.nazwa!=null)
+				.filter(b-> b.priorytet<6 && b.nazwa.length()<9)
+				.collect(Collectors.toList());
+		//sprawdz czy wszystkie butelki mają priorytet większy od 0
+		boolean czyPrioWiekszyZero = butelki.stream().allMatch(b-> b.priorytet>0);
+		
+		
 	}
 
 }
