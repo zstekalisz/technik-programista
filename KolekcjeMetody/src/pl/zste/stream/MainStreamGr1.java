@@ -25,6 +25,7 @@ public class MainStreamGr1 {
 		Dom d8 = new Dom("Namiot", 2);
 		Dom d9 = new Dom("Bliźniak", 7);
 		Dom d10 = new Dom("Letniskowy", 7);
+
 		List<Dom> domy = new ArrayList<>();
 		domy.add(d1);
 		domy.add(d2);
@@ -94,6 +95,87 @@ public class MainStreamGr1 {
 		}
 		Integer suma = domy.stream().filter(d-> d.priorytet!=null).map(d-> d.priorytet).reduce(60, (i1, i2)-> i1+i2);
 		System.out.println(suma);
+		Dom d11 = new Dom(null, 7);
+		domy.add(d11);
+		
+		//utwórz listę domów których priorytet jest większy od 3
+		List<Dom> domyZPrioWiekszyOdTrzy = domy.stream()
+				.filter(d-> d.priorytet!=null)
+				.filter(d-> d.priorytet>3)
+				.collect(Collectors.toList());
+		
+		//policz ile jest domów z priorytetem równym 2
+		long count3 = domy.stream().filter(d-> d.priorytet!=null && d.priorytet==2).count();
+		
+		//zamień listę domów na listę priorytetów
+		List<Integer> prioList = domy.stream().map(d-> d.priorytet).collect(Collectors.toList());
+		
+		//zamień listę domów na listę priorytetów dla domów które mają priorytet większy niż 5
+		List<Integer> collect = domy.stream()
+				.filter(d-> d.priorytet!=null)
+				.filter(d-> d.priorytet>5)
+				.map(d-> d.priorytet)
+				.collect(Collectors.toList());
+		
+		//pogrupuj domy po priorytecie
+		Map<Integer, List<Dom>> collect2 = domy.stream().filter(d-> d.priorytet!=null).collect(Collectors.groupingBy(d-> d.priorytet));
+		
+		//utwórz listę domów których nazwa jest dłuższa niz 5 znaków
+		List<Dom> collect3 = domy.stream()
+				.filter(d-> d.nazwa!=null)
+				.filter(d-> d.nazwa.length()>5)
+				.collect(Collectors.toList());
+		
+		//utwórz listę nazw domów których nazwa jest krótsza niż 8 znaków
+		List<String> nazwyDomowKrotszeNiz8Znakow = domy.stream()
+				.filter(d-> d.nazwa!=null)
+				.map(d-> d.nazwa)
+				.filter(nazwa-> nazwa.length()<8)
+				.collect(Collectors.toList());
+		//policz domy których priorytet jest mniejszy niz 7 a nazwa dłuższa niż 7 znaków
+		long count4 = domy.stream()
+				.filter(d-> d.priorytet!=null)
+				.filter(d-> d.priorytet<7 && d.nazwa.length()>7).count();
+		
+		//znajdz dom który ma priorytet równy 7
+		Optional<Dom> findAny = domy.stream()
+				.filter(d-> d.priorytet!=null)
+				.filter(d-> d.priorytet==7).findAny();
+		if(findAny.isPresent()) {
+			System.out.println(findAny.get());
+		}
+		//to samo co powyżej tylko bez ifa
+		domy.stream()
+		.filter(d-> d.priorytet!=null)
+		.filter(d-> d.priorytet==7)
+		.findAny()
+		.ifPresent(d-> System.out.println(d));
+		
+		//w domach o priorytecie większym niż 5 znajdz dom o najmniejszym priorytecie
+		domy.stream()
+			.filter(d-> d.priorytet!=null)
+			.filter(d-> d.priorytet>5)
+			.min((dom1, dom2)-> dom1.priorytet.compareTo(dom2.priorytet))
+			.ifPresent(d-> System.out.println(d));
+		
+		//oblicz sumę priorytetów dla domów które mają priorytet większy niż 5
+		domy.stream()
+			.filter(d-> d.priorytet!=null)
+			.filter(d-> d.priorytet>5)
+			.map(d-> d.priorytet)
+			.reduce((p1, p2)-> p1+p2)
+			.ifPresent(suma2-> System.out.println(suma2));
+		
+		//sprawdz czy istnieją domy które mają priorytet -1
+		boolean anyMatch = domy.stream().anyMatch(d-> d.priorytet!=null && d.priorytet==-1);
+		System.out.println(anyMatch);
+		
+		//znajdz pierwszy dom który ma priorytet 8
+		domy.stream()
+			.filter(d-> d.priorytet!=null && d.priorytet==8)
+			.findFirst()
+			.ifPresent(d-> System.out.println(d));
+		
 	}
 
 }
