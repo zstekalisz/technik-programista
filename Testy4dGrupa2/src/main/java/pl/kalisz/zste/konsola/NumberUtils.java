@@ -20,6 +20,28 @@ public class NumberUtils {
 	}
 	
 	public static void sortowanieBabelkowe(int[] tablica) {
+		for(int i = 0; i< tablica.length; i++) {
+			for(int j = 0; j< tablica.length-1; j++) {
+				if(tablica[j]> tablica[j+1]) {
+					int cache = tablica[j];
+					tablica[j] = tablica[j+1];
+					tablica[j+1] = cache;
+				}
+			}
+		}
+		
+	}
+	
+	public static void sortowanieBabelkoweMalejące(int[] tablica) {
+		for(int i = 0; i< tablica.length; i++) {
+			for(int j = 0; j< tablica.length-1; j++) {
+				if(tablica[j]< tablica[j+1]) {
+					int cache = tablica[j];
+					tablica[j] = tablica[j+1];
+					tablica[j+1] = cache;
+				}
+			}
+		}
 		
 	}
 

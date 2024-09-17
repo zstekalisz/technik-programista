@@ -29,6 +29,8 @@ public class NumberUtilsTest extends NumberUtils {
 		NumberUtils.sortowanieBabelkowe(tablica);
 		assertEquals(10, tablica.length);
 		assertEquals(1, tablica[0]);
+		assertEquals(17, tablica[4]);
+		assertEquals(1000, tablica[9]);
 	}
 
 }
