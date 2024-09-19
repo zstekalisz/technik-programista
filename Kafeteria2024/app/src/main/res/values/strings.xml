@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kafeteria2024</string>
+    <string name="title">Restauracja w ZSTE</string>
+    <array name="main_menu">
+        <item>Coś 1</item>
+        <item>Kawa</item>
+        <item>Coś 2</item>
+    </array>
+    <string name="coffees">Kawy w ZSTE</string>
+</resources>
