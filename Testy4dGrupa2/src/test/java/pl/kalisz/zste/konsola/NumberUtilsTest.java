@@ -32,5 +32,31 @@ public class NumberUtilsTest extends NumberUtils {
 		assertEquals(17, tablica[4]);
 		assertEquals(1000, tablica[9]);
 	}
+	
+	@Test
+	public void sprawdzeniePlciTest() {
+		int[] pesel = {1,2,3,4,5,6,7,8,9,0,3};
+		int[] pesel2 = {1,2,3,4,5,6,7,8,9,9,6};
+		char kobieta = NumberUtils.sprawdzeniePlci(pesel);
+		char facet = NumberUtils.sprawdzeniePlci(pesel2);
+		assertEquals(kobieta, 75);
+		assertEquals(facet, 77);
+	}
+	
+	@Test
+	public void sprawdzenieSumyKontrolnejTest() {
+		int[] pesel = {1,2,3,4,5,6,7,8,9,0,3};
+		int[] pesel2 = {1,2,3,4,5,6,7,8,9,9,6};
+		int[] pesel3 = {1,2,3,4,5,6,7,8,9,0,1};//zła suma kontrolna
+		int[] pesel4 = {1,2,3,4,5,6,7,8,9,9,9};//zła suma kontrolna
+		boolean wynik1 = NumberUtils.sprawdzenieSumyKontrolnej(pesel);
+		boolean wynik2 = NumberUtils.sprawdzenieSumyKontrolnej(pesel2);
+		boolean wynik3 = NumberUtils.sprawdzenieSumyKontrolnej(pesel3);
+		boolean wynik4 = NumberUtils.sprawdzenieSumyKontrolnej(pesel4);
+		assertTrue(wynik1);
+		assertTrue(wynik2);
+		assertFalse(wynik3);
+		assertFalse(wynik4);
+	}
 
 }
