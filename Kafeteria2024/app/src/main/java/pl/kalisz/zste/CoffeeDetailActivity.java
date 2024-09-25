@@ -1,11 +1,13 @@
 package pl.kalisz.zste;
 
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+
 import android.content.Intent;
+import android.graphics.text.LineBreaker;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,32 +18,28 @@ import androidx.core.view.WindowInsetsCompat;
 import pl.kalisz.zste.model.Coffee;
 import pl.kalisz.zste.model.CoffeeDataSource;
 
-public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-
-    public static final String INDEX = "id";
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(this, CoffeeDetailActivity.class);
-        intent.putExtra(INDEX, position);
-        startActivity(intent);
-    }
+public class CoffeeDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_coffee);
+        setContentView(R.layout.activity_coffee_detail);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        ArrayAdapter<Coffee> coffeeArrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, CoffeeDataSource.getCoffees());
-        ListView view = (ListView) findViewById(R.id.coffees);
-        view.setAdapter(coffeeArrayAdapter);
-        view.setOnItemClickListener(this);
+        Intent intent = getIntent();
+        int position = intent.getIntExtra(CoffeeActivity.INDEX, -1);
+        if(position!=-1){
+            Coffee coffee = CoffeeDataSource.getCoffees().get(position);
+            TextView nameView = (TextView) findViewById(R.id.name);
+            nameView.setText(coffee.name);
+            TextView descView = (TextView) findViewById(R.id.desc);
+            descView.setText(coffee.desc);
+            ImageView pictureView = (ImageView) findViewById(R.id.picture);
+            pictureView.setImageResource(coffee.picture);
+        }
     }
 }

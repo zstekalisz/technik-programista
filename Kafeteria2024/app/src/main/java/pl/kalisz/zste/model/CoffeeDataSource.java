@@ -9,7 +9,6 @@ public class CoffeeDataSource {
 
     public static List<Coffee> getCoffees(){
         ArrayList<Coffee> coffees = new ArrayList<>();
-        //TODO dodać opisy
         coffees.add(new Coffee("Espresso", "Espresso wywodzi się z Włoch, gdzie w 1901 Luigi " +
                 "Bezzera stworzył pierwszy ekspres do espresso. Był on konstrukcją opartą na przepływie pary " +
                 "i wody, co prowadziło do smakowych zmian ekstraktu. nazwa sposobu przygotowywania kawy w specjalnym " +
