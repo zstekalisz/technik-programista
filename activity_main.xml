@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5DC"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Autor"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="#A52A2A"
+        android:gravity="center_vertical"
+        android:text="Gra w Kosci Autor:00000000"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Rzut"
+        android:layout_width="159dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#D2691E"
+        android:text="RZUT KOŚĆMI" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/kosc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kostka_niewiadoma" />
+
+        <ImageButton
+            android:id="@+id/kosc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kostka_niewiadoma" />
+
+        <ImageButton
+            android:id="@+id/kosc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kostka_niewiadoma" />
+
+        <ImageButton
+            android:id="@+id/kosc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kostka_niewiadoma" />
+
+        <ImageButton
+            android:id="@+id/kosc5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kostka_niewiadoma" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/WynikRzutu"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:gravity="center"
+        android:text="Wynik Tego Losowania:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/WynikGry"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:text="Wynik Gry:"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="166dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#D2691E"
+        android:text="Reset Wyniku" />
+
+</LinearLayout>
