@@ -45,5 +45,11 @@ public class KostkaAppTest {
 		}
 
 	}
+	@Test
+	public void sumaPunktwo2Test() {
+		List<Integer> kostki = Arrays.asList(5, 6, 1, 2, 2, 6, 1, 1, 3);
+		int sumaPunktow = KostkaApp.sumaPunktow2(kostki);
+		assertEquals(19, sumaPunktow);
+	}
 
 }
