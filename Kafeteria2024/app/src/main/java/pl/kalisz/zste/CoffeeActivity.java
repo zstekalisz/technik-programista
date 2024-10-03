@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import pl.kalisz.zste.adapters.CustomCoffeeArrayAdapter;
 import pl.kalisz.zste.model.Coffee;
 import pl.kalisz.zste.model.CoffeeDataSource;
 
@@ -39,9 +40,10 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
             return insets;
         });
         ArrayAdapter<Coffee> coffeeArrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, CoffeeDataSource.getCoffees());
+                new ArrayAdapter<>(this, R.layout.my_simple_list_item2, CoffeeDataSource.getCoffees());
         ListView view = (ListView) findViewById(R.id.coffees);
-        view.setAdapter(coffeeArrayAdapter);
+        //view.setAdapter(coffeeArrayAdapter);
+        view.setAdapter(new CustomCoffeeArrayAdapter(this, CoffeeDataSource.getCoffees()));
         view.setOnItemClickListener(this);
     }
 }
