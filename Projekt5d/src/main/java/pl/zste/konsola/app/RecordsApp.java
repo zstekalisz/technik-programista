@@ -11,10 +11,14 @@ public class RecordsApp {
 	public static void main(String[] args) {
 		ArrayList<MusicRecord> records = new ArrayList<>();
 		readFile(records);
-		records.forEach(r-> System.out.println(r));
-		System.out.println(records.size());
+		displayRecords(records);
 		
 
+	}
+
+	public static void displayRecords(ArrayList<MusicRecord> records) {
+		records.forEach(r-> System.out.println(r));
+		System.out.println(records.size());
 	}
 	
 	@SuppressWarnings("resource")

@@ -59,6 +59,8 @@ public class MusicRecord {
 		return Objects.equals(album, other.album) && Objects.equals(artist, other.artist)
 				&& downloadNumber == other.downloadNumber && songsNumber == other.songsNumber && year == other.year;
 	}
+
+	
 	
 	
 	
