@@ -1,0 +1,45 @@
+<div class="container-xxl text-white text-center bg-success p-2">
+  <h1>Ćwiczenia walidacja formularzy</h1>
+</div>
+<div class="container-xxl">
+  <div class="row">
+    <div class="col-6 text-center">
+      <ol class="list-group">
+        @for(person of persons; track $index){
+          <li class="list-group-item">{{person.name}} {{person.surname}}</li>
+        }
+      </ol>
+
+    </div>
+    <div class="col-6 text-black">
+        <form novalidate #form="ngForm" (submit)="savePerson(form)">
+          <div class="input-group">
+            <span class="input-group-text" style="width: 170px;">Podaj imię : </span>
+            <input type="text" class="form-control" name="name" [(ngModel)] = "person.name" required minlength="2" >
+          </div>
+          <div class="input-group">
+            <span class="input-group-text" style="width: 170px;">Podaj nazwisko : </span>
+            <input type="text" class="form-control" name="surname" [(ngModel)]="person.surname">
+          </div>
+          <div class="input-group">
+            <span class="input-group-text" style="width: 170px;">Podaj numer PESEL : </span>
+            <input type="text" class="form-control" name="pesel" [(ngModel)]="person.pesel">
+          </div>
+          <div class="input-group">
+            <span class="input-group-text" style="width: 170px;">Podaj numer NIP : </span>
+            <input type="text" class="form-control" name="nip" [(ngModel)]="person.nip">
+          </div>
+          <div class="input-group">
+            <span class="input-group-text" style="width: 170px;">Podaj wiek : </span>
+            <input type="number" class="form-control" name="age" [(ngModel)]="person.age">
+            
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="submit">Zatwierdź</button>
+          </div>
+          
+        </form>
+    </div>
+  </div>
+
+</div>
