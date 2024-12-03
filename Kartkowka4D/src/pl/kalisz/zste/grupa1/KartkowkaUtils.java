@@ -52,7 +52,7 @@ public class KartkowkaUtils {
 	public static double metoda3(int[] tab) {
 		double result = 0;
 		for(int i : tab) {
-			result=+i;	
+			result+=i;	
 		}
 		return result/tab.length;
 	}
