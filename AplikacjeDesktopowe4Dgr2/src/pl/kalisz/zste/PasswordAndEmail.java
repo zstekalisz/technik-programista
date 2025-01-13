@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -91,7 +94,18 @@ public class PasswordAndEmail {
 		frmResetHasa.getContentPane().add(repeatPass);
 		
 		JButton save = new JButton("Zatwierdź");
+		save.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		save.setBounds(133, 327, 99, 39);
+		save.addActionListener(e->{
+			String textEmail = email.getText();
+			if(!textEmail.contains("@")) {
+				message.setText("Niepoprawny adres email");
+			}else if(!pass.getText().equals(repeatPass.getText()) || pass.getText().isEmpty() || repeatPass.getText().isEmpty()) {
+				message.setText("Hasła się różnią");
+			}else {
+				message.setText("Witaj "+textEmail);
+			}
+		});
 		frmResetHasa.getContentPane().add(save);
 		
 		message = new JTextField();
