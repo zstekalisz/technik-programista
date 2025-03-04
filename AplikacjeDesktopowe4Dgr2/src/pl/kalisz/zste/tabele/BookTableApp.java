@@ -108,6 +108,12 @@ public class BookTableApp {
 		addBook.setBackground(new Color(0, 0, 255));
 		addBook.setBounds(643, 181, 256, 21);
 		frame.getContentPane().add(addBook);
+		addBook.addActionListener(ae->{
+			if(!title.getText().isEmpty() && !author.getText().isEmpty()&& !publisher.getText().isEmpty()&& !category.getText().isEmpty()) {
+				new Book(null, null, null, null);
+			}
+			
+		});
 			
 	}
 	private void addBooksToTableModel(DefaultTableModel md) {
