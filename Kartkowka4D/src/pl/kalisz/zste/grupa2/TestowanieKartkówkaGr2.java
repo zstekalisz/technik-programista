@@ -55,4 +55,27 @@ public class TestowanieKartkówkaGr2 {
 		}
 		return input;
 	}
+	/**
+	 * Metoda zamienia liczbę w systemie dwójkowym na system dziesiętny
+	 * 
+	 * @param binarna
+	 * @return liczba dziesiętna lub -1 w przypadku błędnego parametru wejściowego
+	 */
+	public int binarneNaDziesietne(String binarna) {
+		int wynik = 0;
+		int potega = binarna.length()-1;
+		String[] tablica = binarna.split("");
+		for(String el : tablica) {
+			int elLiczba = Integer.parseInt(el);
+			if(elLiczba!=0 && elLiczba!=1) {
+				return -1;
+			}
+			wynik = wynik+(int)(elLiczba* Math.pow(2, (double)potega));
+			potega--;
+		}
+		
+		
+		
+		return wynik;
+	}
 }

@@ -110,7 +110,9 @@ public class BookTableApp {
 		frame.getContentPane().add(addBook);
 		addBook.addActionListener(ae->{
 			if(!title.getText().isEmpty() && !author.getText().isEmpty()&& !publisher.getText().isEmpty()&& !category.getText().isEmpty()) {
-				new Book(null, null, null, null);
+				Book book = new Book(title.getText(), author.getText(), publisher.getText(), category.getText());
+				Vector<String> rowForTable = book.createRowForTable();
+				model.addRow(rowForTable);
 			}
 			
 		});
