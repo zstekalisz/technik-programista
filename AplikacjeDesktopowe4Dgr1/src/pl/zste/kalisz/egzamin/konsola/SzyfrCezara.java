@@ -51,4 +51,34 @@ public class SzyfrCezara {
 	}
 	
 
+	public static String odszyfruj(String tekst, int klucz) {
+		klucz = klucz%26;
+		String[] tabCrypt = new String[26];
+		for(int i = 0; i<26; i++) {
+			String litera = tab[i];
+			int pozycja = i-klucz;
+			if(pozycja<0) {
+				pozycja = 26+pozycja;
+			}
+			if(pozycja>25 && klucz<0) {
+				pozycja = pozycja-26;
+			}
+			tabCrypt[pozycja] = litera;
+		}
+		String[] split = tekst.split("");
+		StringBuilder b = new StringBuilder();
+		for(String s : split) {
+			if(s.equals(" ")) {
+				b.append(s);
+				continue;
+			}
+			for(int i = 0; i<26; i++) {
+				if(tabCrypt[i].equals(s)) {
+					b.append(tab[i]);
+				}
+			}
+			
+		}
+		return b.toString();
+	}
 }
