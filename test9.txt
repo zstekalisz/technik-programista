@@ -1,0 +1,2 @@
+git config --global user.name Oliwier Kosmala
+git config --global user.email johndoe@example.com
