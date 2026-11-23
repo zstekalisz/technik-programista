@@ -1,0 +1,54 @@
+
+Krok 1: Odinstalowanie Angular CLI
+
+ng version - jak coś wyskoczy tzn. że masz Angulara i trzeba go odinstalować.
+
+Otwórz Wiersz polecenia (CMD) lub PowerShell jako administrator i wpisz:
+npm uninstall -g @angular/cli
+npm cache clean --force
+
+Krok 2: Odinstalowanie Node.js z Windows 11
+
+1. Naciśnij skrót klawiszowy Win + I, aby otworzyć Ustawienia.
+2. Przejdź do sekcji Aplikacje -> Zainstalowane aplikacje.
+3. Wyszukaj Node.js, kliknij trzy kropki obok nazwy i wybierz Odinstaluj.
+4. Postępuj zgodnie z instrukcjami kreatora.
+
+Krok 3: Usunięcie pozostałości po Node.js i npm (ważne dla czystej instalacji)
+
+Windows często zostawia stare pliki konfiguracyjne i pakiety globalne. Naciśnij Win + R, wklejaj poniższe ścieżki jedna po drugiej i usuń te foldery, jeśli nadal istnieją:
+• C:\Program Files\nodejs
+• %AppData%\npm
+• %AppData%\npm-cache
+• %LocalAppData%\npm-cache
+
+Opcjonalnie, dla pewności możesz teraz zrestartować komputer.
+
+Krok 4: Instalacja nowego Node.js
+
+1. Wejdź na oficjalną stronę nodejs.org.
+2. Pobierz instalator oznaczony jako LTS (Long Term Support) dla systemu Windows (.msi). Wersje LTS gwarantują pełną kompatybilność z Angularem.
+3. Uruchom pobrany plik i przejdź przez instalator, akceptując domyślne ustawienia (upewnij się, że opcja dodania do zmiennej środowiskowej PATH jest zaznaczona).
+4. Otwórz nowe okno PowerShell lub CMD i sprawdź, czy instalacja się powiodła:
+
+node -v
+npm -v
+
+
+Krok 5: Instalacja najnowszej wersji Angular CLI
+
+W tym samym oknie terminala zainstaluj globalnie najnowszą wersję Angulara:
+
+npm install -g @angular/cli@latest
+
+Jeśli używasz PowerShella i przy próbie uruchomienia poleceń Angulara pojawi się błąd dotyczący zasad wykonywania skryptów, wpisz jednorazowo: 
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned 
+
+i zatwierdź literą Y.
+
+Krok 6: Weryfikacja
+
+Sprawdź, czy wszystko działa poprawnie, wpisując:
+
+ng version
